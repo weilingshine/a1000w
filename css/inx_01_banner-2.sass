@@ -1,0 +1,235 @@
+@mixin xxsScreen
+    @media (min-width: 375px)
+        @content    
+@mixin xsScreen
+    @media (min-width: 425px)
+        @content
+@mixin smScreen
+    @media (min-width: 576px)
+        @content
+@mixin mdScreen
+    @media (min-width: 768px)
+        @content
+@mixin lgScreen
+    @media (min-width: 992px)
+        @content
+@mixin xlScreen
+    @media (min-width: 1200px)
+        @content
+@mixin xxlScreen
+    @media (min-width: 1440px)
+        @content
+$themes: ('primary': #4a60a9,'secondary': #ff4d7b,'default':#484848,'light':#fff)
+$word2: ('h2':25px ,'h2G':36px,'h3':24px,'h3G':28px,'default':16px,'defaultG':18px,'imgH2':28px,'imgH2G':36px,'sectH2':32px,'sectH2G':48px,'sectP':18px,'sectPG':26px,'btn':24px,'btnG':35px)
+$word: ('h2':22px ,'h2G':34px,'h3':22px,'h3G':26px,'default':16px,'defaultG':18px,'imgH2':26px,'imgH2M':30px,'imgH2G':34px,'sectH2':30px,'sectH2G':40px,'sectP':18px,'sectPG':20px,'btn':22px,'btnG':32px)
+body
+    font-family: 'Microsoft JhengHei', 'Noto Sans CJK', 'Xingothic TC', 'Droid Sans Fallback', 'PingFang TC', 'Heiti TC', 'LiHei Pro', 'Segoe UI', 'Helvetica Neue', Arial, Helvetica, Verdana, 'Trebuchet MS', sans-serif, "PMingLiU"
+    color: map-get($themes, default)
+    font-size: map-get($word, defaults)
+    // text-align: justify
+    @include lgScreen
+        font-size: map-get($word, default)
+img
+    width: 100%
+//// btn new color
+////// color 01
+.btn-main
+    color: #fff
+    background: linear-gradient(8deg, #6717CD 0%, #26ABC8 70%)
+    border-color: transparent
+    border: none
+.btn-main:hover
+    color: #fff
+    background: linear-gradient(8deg, #26ABC8 0%, #6717CD 70%)
+    border-color: transparent
+    border: none
+
+.btn-main:focus, .btn-main.focus
+    color: #fff
+    background: linear-gradient(8deg, #26ABC8 0%, #6717CD 70%)
+    border-color: transparent
+    border: none
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5)
+
+// .btn-main.disabled, .btn-main:disabled
+//     color: #fff
+//     background-color: #e4602d
+//     border-color: #e4602d
+
+.btn-main:not(:disabled):not(.disabled):active, .btn-main:not(:disabled):not(.disabled).active,
+.show > .btn-main.dropdown-toggle
+    color: #fff
+    background: linear-gradient(8deg, #26ABC8 0%, #6717CD 70%)
+    border-color: transparent
+    border: none
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5)
+
+// .btn-main:not(:disabled):not(.disabled):active:focus, .btn-main:not(:disabled):not(.disabled).active:focus,
+// .show > .btn-main.dropdown-toggle:focus
+//     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5)
+
+// infoSect
+.infoSect
+    .row
+        margin-right: -5px
+        margin-left: -5px
+        @include lgScreen
+            margin-right: -15px
+            margin-left: -15px
+        &:nth-child(1)
+            margin-bottom: 26px
+            @include lgScreen
+                margin-bottom: 60px
+    h2
+        display: inline-block
+        margin-bottom: 13px
+        padding: 5px 23px 7px
+        font-size: map-get($word, h2)
+        color: map-get($themes, light)
+        background: map-get($themes, primary)
+        font-weight: bold
+        letter-spacing: 1px
+        @include lgScreen
+            margin-bottom: 33px
+            font-size: map-get($word, h2G)
+
+    h2 + p
+        margin-bottom: 20px
+        color: map-get($themes, primary)
+        font-size: map-get($word, h3)
+        font-weight: bold
+        line-height: 30px
+        text-align: justify
+        line-height: 27px
+        @include lgScreen
+            margin-bottom: 17px
+            font-size: map-get($word, h3G)
+    p
+        line-height: 27px
+        text-align: left
+        font-size: map-get($word, default)
+        @include lgScreen
+            font-size: map-get($word, defaultG)
+    figure
+        margin-bottom: 45px
+        text-align: center
+        @include lgScreen
+            margin-bottom: 0
+        h2
+            margin-bottom: 0
+            padding: 0
+            text-align: center
+            font-size: map-get($word, imgH2)
+            color: map-get($themes, secondary)
+            background: transparent
+            @include lgScreen
+                margin: 10px 0 0
+                font-size: map-get($word, imgH2G)
+        img
+            margin-bottom: 20px
+            width: 96.2%
+            @include lgScreen
+                margin-bottom: 10px
+                width: 320px
+//step1Sect
+.step1Sect
+    position: relative
+    padding-top: 17vw
+    padding-bottom: 90vw
+    background: url('../img/inx_step/icon_bg00.svg') no-repeat
+    background-size: cover
+    @include xxsScreen
+        padding-bottom: 85vw
+    @include xsScreen
+        padding-bottom: 80vw
+    @include smScreen
+        padding-bottom: 67vw
+    @include mdScreen
+        padding: 80px 0
+        background: url('../img/inx_step/icon_bg00_md.svg') no-repeat
+        background-size: 100%
+    // background-repeat: no-repeat,no-repeat
+    // background-size: 95%, cover
+    // background-position:  left bottom, center bottom
+    // @include mdScreen
+    //     padding-top: 10vw
+    //     padding-bottom: 8vw
+    //     background: url('../img/inx_step/icon_bg01_md.svg'), url('../img/inx_step/icon_bg00_md.svg')
+    //     background-repeat: no-repeat,no-repeat
+    //     background-size: 60%, cover
+    //     background-position:  -30% center, center bottom
+    // @include lgScreen
+    //     padding-top: 80px
+    //     padding-bottom: 80px
+    //     background: url('../img/inx_step/icon_bg01_md.svg')
+    //     background-repeat: no-repeat
+    //     background-position: -35% center
+    //     background-size: 65%
+    // @include xlScreen
+    //     padding-top: 150px
+    //     padding-bottom: 150px
+    //     background-position: left center
+    //     background-size: 979px
+    .imgBox
+        .imgLeft
+            position: absolute
+            top: 61%
+            bottom: 0
+            left: 0
+            right: 0
+            background: url('../img/inx_step/icon_bg01.svg') no-repeat 
+            background-position: -20px 7%
+            @include xxsScreen
+                top: 59%
+                background-position: -20px top
+            @include xsScreen
+                top: 57%
+            @include smScreen
+                top: 52%
+            @include mdScreen
+                top: 0
+                bottom: 0
+                left: 0
+                right: 50%
+                background-position: right center
+                background-size: 102%
+            
+
+    .row
+        margin-right: -5px
+        margin-left: -5px
+        @include lgScreen
+            margin-right: -15px
+            margin-left: -15px
+    h2
+        font-size: map-get($word, sectH2)
+        color: map-get($themes, secondary)
+        font-weight: bold
+        @include lgScreen
+            font-size: map-get($word, sectH2G)
+    p
+        text-align: left
+        font-size: map-get($word, sectP)
+        @include lgScreen
+            font-size: map-get($word, sectPG)
+        span
+            display: block
+            @include mdScreen
+                display: unset
+    p + p
+        margin-bottom: 40px
+    .btn-main
+        display: unset
+        margin: 20px auto 0
+        padding: 6px 30px
+        border-radius: 50px
+        font-size: map-get($word, btn)
+        @include lgScreen
+            padding: 8px 45px
+            font-size: map-get($word, btnG)
+    .setTag
+        text-align: center
+        @include mdScreen
+            text-align: left
+    
+

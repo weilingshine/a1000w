@@ -1,0 +1,601 @@
+body {
+  font-family: 'Microsoft JhengHei', 'Noto Sans CJK', 'Xingothic TC', 'Droid Sans Fallback', 'PingFang TC', 'Heiti TC', 'LiHei Pro', 'Segoe UI', 'Helvetica Neue', Arial, Helvetica, Verdana, 'Trebuchet MS', sans-serif, "PMingLiU";
+  color: #484848;
+}
+
+@media (min-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.btn-main {
+  color: #fff;
+  background: linear-gradient(8deg, #6717CD 0%, #26ABC8 70%);
+  border-color: transparent;
+  border: none;
+}
+
+.btn-main:hover {
+  color: #fff;
+  background: linear-gradient(8deg, #26ABC8 0%, #6717CD 70%);
+  border-color: transparent;
+  border: none;
+}
+
+.btn-main:focus, .btn-main.focus {
+  color: #fff;
+  background: linear-gradient(8deg, #26ABC8 0%, #6717CD 70%);
+  border-color: transparent;
+  border: none;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-main:not(:disabled):not(.disabled):active, .btn-main:not(:disabled):not(.disabled).active,
+.show > .btn-main.dropdown-toggle {
+  color: #fff;
+  background: linear-gradient(8deg, #26ABC8 0%, #6717CD 70%);
+  border-color: transparent;
+  border: none;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.toplinkzone {
+  overflow: hidden;
+}
+
+.sectShareStyle .row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+@media (min-width: 992px) {
+  .sectShareStyle .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.sectShareStyle h2 {
+  font-size: 28px;
+  color: #ff4d7b;
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .sectShareStyle h2 {
+    font-size: 26x;
+  }
+}
+
+.sectShareStyle p {
+  text-align: left;
+  font-size: 18px;
+}
+
+@media (min-width: 992px) {
+  .sectShareStyle p {
+    font-size: 16px;
+  }
+}
+
+.sectShareStyle p span {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .sectShareStyle p span {
+    display: unset;
+  }
+}
+
+@media (min-width: 768px) {
+  .sectShareStyle p + p {
+    margin-bottom: 20px;
+  }
+}
+
+.sectShareStyle .btnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+@media (min-width: 425px) {
+  .sectShareStyle .btnBox {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .sectShareStyle .btnBox {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    margin: unset;
+    width: unset;
+  }
+}
+
+@media (min-width: 992px) {
+  .sectShareStyle .btnBox {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sectShareStyle .btnBox {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.sectShareStyle .btn-main {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin: 20px 0 0;
+  padding: 6px 30px;
+  border-radius: 45px;
+  font-size: 22px;
+}
+
+@media (min-width: 992px) {
+  .sectShareStyle .btn-main {
+    padding: 8px 37px;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sectShareStyle .btn-main:nth-child(1) {
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .sectShareStyle .btn-main:nth-child(1) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sectShareStyle .btn-main:nth-child(1) {
+    margin-right: 20px;
+  }
+}
+
+.sectShareStyle .setTag {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sectShareStyle .setTag {
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  section.infoSect {
+    margin: 0 0 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  section.infoSect {
+    margin: 0 0 110px;
+  }
+}
+
+section.step1Sect {
+  margin: 0 0 50px;
+}
+
+@media (min-width: 768px) {
+  section.step1Sect {
+    margin: 0 0 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  section.step1Sect {
+    margin: 70px 0;
+  }
+}
+
+section.step2Sect {
+  margin: 0 0 70px;
+}
+
+section.step3Sect {
+  margin: 0 0 50px;
+}
+
+.infoSect .row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+@media (min-width: 992px) {
+  .infoSect .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.infoSect .row:nth-child(1) {
+  margin-bottom: 26px;
+}
+
+@media (min-width: 992px) {
+  .infoSect .row:nth-child(1) {
+    margin-bottom: 60px;
+  }
+}
+
+.infoSect h2 {
+  display: inline-block;
+  margin-bottom: 13px;
+  padding: 5px 23px 7px;
+  font-size: 22px;
+  color: #fff;
+  background: #4a60a9;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 992px) {
+  .infoSect h2 {
+    margin-bottom: 33px;
+    font-size: 34px;
+  }
+}
+
+.infoSect h2 + p {
+  margin-bottom: 20px;
+  color: #4a60a9;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+  line-height: 27px;
+}
+
+@media (min-width: 992px) {
+  .infoSect h2 + p {
+    margin-bottom: 17px;
+    font-size: 26px;
+  }
+}
+
+.infoSect p {
+  line-height: 27px;
+  font-size: 16px;
+}
+
+@media (min-width: 992px) {
+  .infoSect p {
+    font-size: 18px;
+  }
+}
+
+.infoSect figure {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .infoSect figure {
+    margin-bottom: 0;
+  }
+}
+
+.infoSect figure h2 {
+  margin-bottom: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 26px;
+  color: #ff4d7b;
+  background: transparent;
+}
+
+@media (min-width: 992px) {
+  .infoSect figure h2 {
+    margin: 10px 0 0;
+    font-size: 26px;
+  }
+}
+
+.infoSect figure img {
+  margin-bottom: 20px;
+  width: 96.2%;
+}
+
+@media (min-width: 992px) {
+  .infoSect figure img {
+    margin-bottom: 10px;
+    width: 320px;
+  }
+}
+
+.infoSect figure a h2:hover {
+  text-decoration: underline;
+}
+
+.step1Sect {
+  position: relative;
+  padding-top: 15vw;
+  padding-bottom: 90vw;
+  background: url("../img/inx_step/icon_bg.svg") no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .step1Sect {
+    padding: 80px 0;
+    background: url("../img/inx_step/icon_bg_md.svg") no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+}
+
+@media (min-width: 992px) {
+  .step1Sect {
+    padding: 34px 0;
+    background: unset;
+  }
+}
+
+@media (min-width: 1200px) {
+  .step1Sect {
+    padding: 70px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step1Sect {
+    padding: 115px 0;
+  }
+}
+
+.step1Sect .imgBox .imgLeft {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../img/inx_step/icon_left.svg") no-repeat;
+  background-position: -20px bottom;
+}
+
+@media (min-width: 768px) {
+  .step1Sect .imgBox .imgLeft {
+    background: url("../img/inx_step/icon_left_md.svg") no-repeat;
+    right: 52%;
+    background-position: right center;
+    background-size: 120%;
+  }
+}
+
+@media (min-width: 992px) {
+  .step1Sect .imgBox .imgLeft {
+    right: 47%;
+    background-size: 105%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step1Sect .imgBox .imgLeft {
+    left: -10%;
+    right: 50%;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step1Sect .imgBox .imgRight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 80%;
+    right: 0;
+    background: url("../img/inx_step/icon_right.svg") no-repeat;
+    background-position: 80% 24%;
+    background-size: 35%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .step1Sect .imgBox .imgRight {
+    background-position: 20% 24%;
+  }
+}
+
+.step2Sect {
+  position: relative;
+  padding-bottom: 63vw;
+}
+
+@media (min-width: 768px) {
+  .step2Sect {
+    padding: 36px 0;
+    background: url("../img/inx_step2/icon_bg_md.svg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  .step2Sect {
+    padding: 104px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .step2Sect {
+    padding: 180px 0 120px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step2Sect {
+    padding: 220px 0 140px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step2Sect {
+    padding: 240px 0 120px;
+    background-size: 1920px;
+  }
+}
+
+.step2Sect .imgRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  background: url("../img/inx_step2/icon_right.svg") no-repeat;
+  background-position: left bottom;
+}
+
+@media (min-width: 768px) {
+  .step2Sect .imgRight {
+    left: 47%;
+    right: 0;
+    background-position: left center;
+    background-size: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .step2Sect .imgRight {
+    left: 42%;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step2Sect .imgRight {
+    left: 45%;
+    background-size: 865px;
+  }
+}
+
+.step3Sect {
+  position: relative;
+  padding-bottom: 75vw;
+  background: url("../img/inx_step3/icon_bg.svg") no-repeat;
+  background-position: center 5%;
+  background-size: 180%;
+}
+
+@media (min-width: 576px) {
+  .step3Sect {
+    background-size: 150%;
+  }
+}
+
+@media (min-width: 768px) {
+  .step3Sect {
+    background: url("../img/inx_step3/icon_bg_md.svg") no-repeat;
+    padding: 90px 0 50px;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  .step3Sect {
+    padding: 140px 0 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .step3Sect {
+    padding: 210px 0 100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step3Sect {
+    padding: 210px 0 180px;
+  }
+}
+
+.step3Sect .imgBox .imgLeft {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 18%;
+  right: 18%;
+  background: url("../img/inx_step3/icon_left.svg") no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .step3Sect .imgBox .imgLeft {
+    background: url("../img/inx_step3/icon_left_md.svg") no-repeat;
+    top: 0;
+    left: 0;
+    right: 54%;
+    background-position: right center;
+    background-size: 120%;
+  }
+}
+
+@media (min-width: 992px) {
+  .step3Sect .imgBox .imgLeft {
+    background: url("../img/inx_step3/icon_left_lg.svg") no-repeat;
+    right: 50%;
+    background-position: right center;
+    background-size: 120%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .step3Sect .imgBox .imgLeft {
+    background-size: 120%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step3Sect .imgBox .imgLeft {
+    background-size: 931px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .step3Sect .imgBox .imgRight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 80%;
+    right: 0;
+    background: url("../img/inx_step3/icon_right.svg") no-repeat;
+    background-position: 80% center;
+    background-size: 35%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .step3Sect .imgBox .imgRight {
+    background-position: 20% 70%;
+  }
+}
+/*# sourceMappingURL=inx_01_banner.css.map */
