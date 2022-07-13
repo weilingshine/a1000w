@@ -1,0 +1,484 @@
+@mixin xxsScreen
+    @media (min-width: 375px)
+        @content    
+@mixin xsScreen
+    @media (min-width: 425px)
+        @content
+@mixin smScreen
+    @media (min-width: 576px)
+        @content
+@mixin mdScreen
+    @media (min-width: 768px)
+        @content
+@mixin lgScreen
+    @media (min-width: 992px)
+        @content
+@mixin xlScreen
+    @media (min-width: 1200px)
+        @content
+@mixin xxlScreen
+    @media (min-width: 1440px)
+        @content
+
+@mixin x3xlScreen
+    @media (min-width: 1700px)
+        @content
+$themes: ('primary': #4a60a9,'secondary': #ff4d7b,'default':#484848,'light':#fff)
+$word2: ('h2':25px ,'h2G':36px,'h3':24px,'h3G':28px,'default':16px,'defaultG':18px,'imgH2':28px,'imgH2G':36px,'sectH2':32px,'sectH2G':48px,'sectP':18px,'sectPG':26px,'btn':24px,'btnG':35px)
+$word: ('h2':22px ,'h2G':34px,'h3':22px,'h3G':24px,'default':16px,'defaultG':18px,'imgH2':20px,'imgH2M':20px,'imgH2L':26px,'imgH2G':26px,'sectH2':30px,'sectH2G':26x,'sectP':18px,'sectPG':16px,'btn':22px,'btnG':26px)
+body
+    font-family: 'Microsoft JhengHei', 'Noto Sans CJK', 'Xingothic TC', 'Droid Sans Fallback', 'PingFang TC', 'Heiti TC', 'LiHei Pro', 'Segoe UI', 'Helvetica Neue', Arial, Helvetica, Verdana, 'Trebuchet MS', sans-serif, "PMingLiU"
+    color: map-get($themes, default)
+    font-size: map-get($word, defaults)
+    // text-align: justify
+    @include lgScreen
+        font-size: map-get($word, default)
+img
+    width: 100%
+//// btn new color
+////// color 01
+.btn-main
+    color: #fff
+    background: linear-gradient(8deg, #6717CD 0%, #26ABC8 70%)
+    border-color: transparent
+    border: none
+.btn-main:hover
+    color: #fff
+    background: linear-gradient(8deg, #26ABC8 0%, #6717CD 70%)
+    border-color: transparent
+    border: none
+
+.btn-main:focus, .btn-main.focus
+    color: #fff
+    background: linear-gradient(8deg, #26ABC8 0%, #6717CD 70%)
+    border-color: transparent
+    border: none
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5)
+
+// .btn-main.disabled, .btn-main:disabled
+//     color: #fff
+//     background-color: #e4602d
+//     border-color: #e4602d
+
+.btn-main:not(:disabled):not(.disabled):active, .btn-main:not(:disabled):not(.disabled).active,
+.show > .btn-main.dropdown-toggle
+    color: #fff
+    background: linear-gradient(8deg, #26ABC8 0%, #6717CD 70%)
+    border-color: transparent
+    border: none
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5)
+
+// .btn-main:not(:disabled):not(.disabled):active:focus, .btn-main:not(:disabled):not(.disabled).active:focus,
+// .show > .btn-main.dropdown-toggle:focus
+//     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5)
+
+.toplinkzone
+    overflow: hidden
+
+    //share
+.sectShareStyle
+    .row
+        margin-right: -5px
+        margin-left: -5px
+        @include lgScreen
+            margin-right: -15px
+            margin-left: -15px
+    h2
+        font-size: map-get($word, sectH2)
+        color: map-get($themes, secondary)
+        font-weight: bold
+        @include lgScreen
+            font-size: map-get($word, sectH2G)
+    p
+        text-align: left
+        font-size: map-get($word, sectP)
+        @include lgScreen
+            font-size: map-get($word, sectPG)
+        span
+            display: block
+            @include mdScreen
+                display: unset
+    p + p
+        @include mdScreen
+            margin-bottom: 20px
+    .btnBox
+        display: flex
+        justify-content: space-around
+        flex-flow: wrap
+        @include xsScreen
+            margin: 0 auto
+            width: 90%
+        @include mdScreen
+            justify-content: start
+            margin: unset
+            width: unset
+        @include lgScreen
+            justify-content: space-between
+        @include xlScreen
+            justify-content: start
+    .btn-main
+        // display: unset
+        flex-grow: 0
+        margin: 20px 0 0
+        padding: 6px 30px
+        border-radius: 45px
+        font-size: map-get($word, btn)
+        @include lgScreen
+            padding: 8px 37px
+            font-size: map-get($word, btnG)
+        @include mdScreen
+            &:nth-child(1)
+                margin-right: 15px
+        @include lgScreen
+            &:nth-child(1)
+                margin-right: 0
+        @include xlScreen
+            &:nth-child(1)
+                margin-right: 20px
+
+                
+    .setTag
+        text-align: center
+        @include mdScreen
+            text-align: left
+// infoSect
+section.inxBannerSec
+    margin-bottom: 20px
+section.infoSect
+    margin: 0 0 20px
+    @include mdScreen
+        margin: 40px 0 30px
+    @include lgScreen
+        margin: 40px 0 70px
+section.infoSect2
+    margin: 0 0 5px
+    @include mdScreen
+        margin: 40px 0 30px
+    @include lgScreen
+        margin: 40px 0 70px
+section.step1Sect
+    margin: 0 0 20px
+    @include mdScreen
+        margin: 0 0 70px 
+    @include lgScreen
+        margin: 70px 0
+section.step2Sect
+    margin: 0 0 90px
+section.step3Sect
+    margin: 0 0 50px
+
+.infoSect
+    .row
+        margin-right: -5px
+        margin-left: -5px
+        @include lgScreen
+            margin-right: -15px
+            margin-left: -15px
+        // &:nth-child(1)
+        //     margin-bottom: 26px
+            @include lgScreen
+                margin-bottom: 60px
+    h2
+        display: inline-block
+        margin-bottom: 13px
+        padding: 5px 23px 7px
+        font-size: map-get($word, h2)
+        color: map-get($themes, light)
+        background: map-get($themes, primary)
+        font-weight: bold
+        letter-spacing: 1px
+        @include lgScreen
+            margin-bottom: 33px
+            font-size: map-get($word, h2G)
+
+    p
+        margin-bottom: 20px
+        color: map-get($themes, primary)
+        font-size: map-get($word, h3)
+        font-weight: bold
+        line-height: 30px
+        // text-align: justify
+        line-height: 27px
+        @include lgScreen
+            margin-bottom: 17px
+            font-size: map-get($word, h3G)
+    // p
+    //     line-height: 27px
+    //     // text-align: left
+    //     font-size: map-get($word, default)
+    //     @include lgScreen
+    //         font-size: map-get($word, defaultG)
+    figure
+        margin-bottom: 10px
+        text-align: center
+        @include mdScreen
+            margin-bottom: 0
+        h2
+            margin-bottom: 0
+            padding: 8px 10px
+            display: block
+            text-align: center
+            font-size: map-get($word, imgH2)
+            color: map-get($themes, light)
+            background: map-get($themes, secondary)
+            border-radius: 8px
+            @include mdScreen
+                font-size: map-get($word, imgH2G)
+                color: map-get($themes, secondary)
+                background: transparent
+            @include lgScreen
+                margin: 10px 0 0
+                // font-size: map-get($word, imgH2G)
+        img
+            margin-bottom: 0
+            width: 96.2%
+            @include lgScreen
+                margin-bottom: 10px
+                width: 320px
+        a 
+            &:hover
+                h2
+                    text-decoration: underline
+                    color: map-get($word, secondary)
+.infoSect2
+    .row
+        margin-right: -5px
+        margin-left: -5px
+        @include lgScreen
+            margin-right: -15px
+            margin-left: -15px
+        // &:nth-child(1)
+        //     margin-bottom: 26px
+            @include lgScreen
+                margin-bottom: 60px
+    h2
+        display: inline-block
+        margin-bottom: 13px
+        padding: 5px 23px 7px
+        font-size: map-get($word, h2)
+        color: map-get($themes, light)
+        background: map-get($themes, primary)
+        font-weight: bold
+        letter-spacing: 1px
+        @include lgScreen
+            margin-bottom: 33px
+            font-size: map-get($word, h2G)
+
+    p
+        margin-bottom: 20px
+        color: map-get($themes, primary)
+        font-size: map-get($word, h3)
+        font-weight: bold
+        line-height: 30px
+        // text-align: justify
+        line-height: 27px
+        @include lgScreen
+            margin-bottom: 17px
+            font-size: map-get($word, h3G)
+    // p
+    //     line-height: 27px
+    //     // text-align: left
+    //     font-size: map-get($word, default)
+    //     @include lgScreen
+    //         font-size: map-get($word, defaultG)
+    figure
+        padding: 0 30px
+        text-align: center
+        @include xsScreen
+            padding: 0 70px
+        @include smScreen
+            padding: 0 120px
+        @include mdScreen
+            padding: 0 0
+            margin-bottom: 0
+        h2
+            margin-bottom: 0
+            padding: 10px 10px
+            display: block
+            text-align: center
+            font-size: map-get($word, imgH2)
+            color: map-get($themes, secondary)
+            background: map-get($themes, light)
+            border-radius: 50px
+            transition: all .3s ease-out
+            border: 1px solid map-get($word, secondary)
+            @include mdScreen
+                display: inline-block
+                padding: 10px 10px
+                margin-bottom: 20px
+                font-size: map-get($word, imgH2M)
+                color: map-get($themes, secondary)
+                background: transparent
+            @include lgScreen
+                margin: 10px 0 30px
+                padding: 10px 20px
+                font-size: map-get($word, imgH2L)
+                // font-size: map-get($word, imgH2G)
+        span
+            @include mdScreen
+                display: block
+        img
+            margin-bottom: 0
+            width: 96.2%
+            @include lgScreen
+                margin-bottom: 10px
+                width: 320px
+        a
+            &:hover
+                text-decoration: none
+                h2
+                    background: map-get($themes, secondary)
+                    color: map-get($themes, light)
+//step1Sect
+.step1Sect
+    position: relative
+    padding-top: 15vw
+    padding-bottom: 80vw
+    background: url('../img/inx_step/icon_bg.svg') no-repeat
+    background-size: cover
+    @include mdScreen
+        padding: 80px 0
+        background: url('../img/inx_step/icon_bg_md.svg') no-repeat
+        background-size: cover
+        background-position: top center
+    @include lgScreen
+        padding: 34px 0
+        background: unset
+    @include xlScreen
+        padding: 70px 0
+    @include xxlScreen
+        padding: 115px 0
+    .imgBox
+        .imgLeft
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background: url('../img/inx_step/icon_left.svg') no-repeat 
+            background-position: -20px bottom
+            @include mdScreen
+                background: url('../img/inx_step/icon_left_md.svg') no-repeat 
+                right: 52%
+                background-position: right center
+                background-size: 120% 
+            @include lgScreen
+                right: 47%
+                background-size: 105% 
+            @include xxlScreen
+                left: -10%
+                right: 50%
+                background-size: contain
+        .imgRight
+            @include xxlScreen
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 80%
+                right: 0
+                background: url('../img/inx_step/icon_right.svg') no-repeat
+                background-position: 80% 24%
+                background-size: 35%
+            @include x3xlScreen
+                background-position: 20% 24%
+                
+//step2Sect
+.step2Sect
+    position: relative
+    padding-bottom: 63vw
+    @include mdScreen
+        padding: 36px 0
+        background: url('../img/inx_step2/icon_bg_md.svg') no-repeat 
+        background-position: center center
+        background-size: cover
+    @include lgScreen
+        padding: 104px 0
+    @include xlScreen
+        padding: 180px 0 120px
+    @include xxlScreen
+        padding: 220px 0 140px
+    @include xxlScreen
+        padding: 240px 0 120px
+        background-size: 1920px
+    .imgRight
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 5%
+        right: 5%
+        background: url('../img/inx_step2/icon_right.svg') no-repeat 
+        background-position: left bottom
+        @include mdScreen
+            left: 47%
+            right: 0
+            background-position: left center
+            background-size: 100%
+        @include lgScreen
+            left: 42%
+            background-size: contain
+        @include xxlScreen
+            left: 45%
+            background-size: 865px
+//step3Sect
+.step3Sect
+    position: relative
+    padding-bottom: 75vw
+    background: url('../img/inx_step3/icon_bg.svg') no-repeat 
+    background-position: center 5%
+    background-size: 180%
+    @include smScreen
+        background-size: 150%
+    @include mdScreen
+        background: url('../img/inx_step3/icon_bg_md.svg') no-repeat 
+        padding: 90px 0 50px
+        background-position: center center
+        background-size: cover
+    @include lgScreen
+        padding: 140px 0 50px
+    //     background-position: center top
+    @include xlScreen
+        padding: 210px 0 100px
+    @include xxlScreen
+        padding: 210px 0 180px
+    
+
+    .imgBox
+        .imgLeft
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 18%
+            right: 18%
+            background: url('../img/inx_step3/icon_left.svg') no-repeat 
+            background-position: center bottom
+            background-size: contain
+            @include mdScreen
+                background: url('../img/inx_step3/icon_left_md.svg') no-repeat 
+                top: 0
+                left: 0
+                right: 54%
+                background-position: right center
+                background-size: 120%
+                // background-size: 120% 
+            @include lgScreen
+                background: url('../img/inx_step3/icon_left_lg.svg') no-repeat 
+                right: 50%
+                background-position: right center
+                background-size: 120%
+            @include xlScreen
+                background-size: 120%
+            @include xxlScreen
+                background-size: 931px
+        .imgRight
+            @include xxlScreen
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 80%
+                right: 0
+                background: url('../img/inx_step3/icon_right.svg') no-repeat
+                background-position: 80% center
+                background-size: 35%
+            @include x3xlScreen
+                background-position: 20% 70%
+        
